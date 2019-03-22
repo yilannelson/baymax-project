@@ -7,17 +7,18 @@ def clear():
 def main_menu():
     clear()
     print("-----------------------------------\n"
-          "Main menu:\n"
+          "What sypmtoms are you displaying?\n"
           "-----------------------------------\n"
           "[1] Runny Nose\n"
           "[2] Sore Throat\n"
           "[3] Other\n"
-          "Select option 3 to exit>: ")
+          "Select option 3 for other symptoms ")
 
 def idle_screen():
+  
          clear()
-         print("Welcome to the Baymax Vending Machine!\n"
-               "Press 1 to begin!")
+         print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
+          "Press any button to begin!")
          choice = input()
          choice = str(choice)
          if choice == 1:
@@ -29,6 +30,16 @@ def idle_screen():
               print("Please choose one of the options listed")
               sleep(5)
      return idle_screen()
+
+    clear()
+    print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
+          "Press any button to begin!")
+    choice = input()
+    choice = str(choice)
+    if choice == 1:
+        return main_menu()
+    else:
+        return main_menu()
 
 def vend_complete():
     print("Have a nice Day")
@@ -43,11 +54,8 @@ def runny_nose():
           "Runny Nose menu:\n"
           "-----------------------------------\n"
           "[1] Tissue    \n"
-          "[2] Juice    \n"
-          "[3] Soda     \n"
-          "Select a drink by entering the number next to the name <x to exit to the main menu>\n")
-
-        choice = input("Drink option: ")
+                                                 )
+        choice = input("option: ")
         choice = str(choice)
         if choice == "1":
             global balance
@@ -68,21 +76,25 @@ def runny_nose():
         else:
             print("invalid option!")
 
-def snacks_menu():
+def other():
+
+    while True:
+        clear()
+        print("------------------------------------ \n" 
+          "Other Symptoms:\n"
+          "------------------------------------ \n"
+          "We are unable to assist you with your symptoms, we advise going to see the school nurse for aditional assitance\n")
+def SoreThroat_menu():
 
     while True:
         clear()
         print("-----------------------------------\n"
-          "snacks menu:\n"
+          "Sore Throat menu:\n"
           "-----------------------------------\n"
-          "Chips    $0.99\n"
-          "Peanuts  $0.5\n"
-          "Gum      $1.35\n"
-          "Select a snack by entering the full name <x to exit to the main menu>\n")
-
-        choice = input("Snack option: ")
+          "Cough Drops\n")
+        choice = input("Sore Throat option: ")
         choice = str(choice)
-        if choice == "Chips":
+        if choice == "Cough Drops":
             global balance
             balance = float(balance) - 0.99
             global total_purchase
@@ -91,22 +103,6 @@ def snacks_menu():
             else:
                 print("you don't have enough money to buy Chips <", str(rdollar), "<", str(0.99), ">")
 
-        elif choice == "Peanuts":
-            balance = float(balance) - 0.5
-            if(balance >0):
-                print("Vending Juice, you have", str(balance), "dollars left")
-            else:
-                print("you don't have enough money to buy Peanuts <", str(rdollar), "<", str(0.5), ">")
-        elif choice == "Gum":
-            balance = float(balance) - 0.35
-            if(balance >0):
-                print("Vending Gum, you have", str(balance), "dollars left")
-            else:
-                print("you don't have enough money to buy Gum <", str(rdollar), "<", str(0.35), ">")
-        elif choice == "x":
-            return main_menu()
-        else:
-            print("invalid option!")
 while True:
     idle_screen()
     choice = input()
@@ -116,8 +112,11 @@ while True:
             runny_nose()
     elif choice == 2:
             balance = 2
-            snacks_menu()
+            SoreThroat_menu()
     elif choice == 3:
+            balance = 3
+            other()
+    elif choice == 4:
             print("-------------------------------\n"
                   "Inserted amount: ", str(rdollar),",", "total purchase: ", rdollar-balance, ",", "change: ", balance)
             exit()
