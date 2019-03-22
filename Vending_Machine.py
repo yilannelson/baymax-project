@@ -15,15 +15,20 @@ def main_menu():
           "Select option 3 to exit>: ")
 
 def idle_screen():
-    clear()
-    print("Welcome to the Baymax Vending Machine!\n"
-          "Press any button to begin!")
-    choice = input("")
-    choice = str(choice)
-    if choice == "e":
-        return main_menu()
-    else:
-        return main_menu()
+         clear()
+         print("Welcome to the Baymax Vending Machine!\n"
+               "Press 1 to begin!")
+         choice = input()
+         choice = str(choice)
+         if choice == 1:
+             return main_menu()
+         else:
+             return main_menu()
+         try:
+         except:
+              print("Please choose one of the options listed")
+              sleep(5)
+     return idle_screen()
 
 def vend_complete():
     print("Have a nice Day")
@@ -102,7 +107,6 @@ def snacks_menu():
             return main_menu()
         else:
             print("invalid option!")
-
 while True:
     idle_screen()
     choice = input()
@@ -117,5 +121,7 @@ while True:
             print("-------------------------------\n"
                   "Inserted amount: ", str(rdollar),",", "total purchase: ", rdollar-balance, ",", "change: ", balance)
             exit()
+    elif choice == string:
+            main_menu()
     else:
             print("invalid option!")
