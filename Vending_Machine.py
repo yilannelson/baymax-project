@@ -1,3 +1,4 @@
+import time
 def main_menu():
     print("-----------------------------------\n"
           "Main menu:\n"
@@ -7,16 +8,32 @@ def main_menu():
           "[3] Other\n"
           "Select option 3 to exit>: ")
 
+def idle_screen():
+    print("Welcome to the Baymax Vending Machine!\n"
+          "Press any button to begin!")
+    choice = input("")
+    choice = str(choice)
+    if choice == "e":
+        return main_menu()
+    else:
+        return main_menu()
+
+def vend_complete():
+    print("Have a nice Day")
+    time.sleep(5)
+    return idle_screen()
+
+
 def runny_nose():
 
     while True:
         print("-----------------------------------\n"
           "Runny Nose menu:\n"
           "-----------------------------------\n"
-          "[1] Water    \n"
-          "Juice    $0.99\n"
-          "Soda     $1.39\n"
-          "Select a drink by entering the full name <x to exit to the main menu>\n")
+          "[1] Tissue    \n"
+          "[2] Juice    \n"
+          "[3] Soda     \n"
+          "Select a drink by entering the number next to the name <x to exit to the main menu>\n")
 
         choice = input("Drink option: ")
         choice = str(choice)
@@ -24,23 +41,16 @@ def runny_nose():
             global balance
             balance = float(balance) - 1
             global total_purchase
-            if(balance >0):
-                print("Vending water, you have", str(balance), "dollars left")
-            else:
-                print("you don't have enough money to buy Water <", str(rdollar), "<", str(0.75), ">")
-
-        elif choice == "Juice":
-            balance = float(balance) - 0.99
-            if(balance >0):
-                print("Vending Juice, you have", str(balance), "dollars left")
-            else:
-                print("you don't have enough money to buy Juice <", str(rdollar), "<", str(0.99), ">")
-        elif choice == "Soda":
-            balance = float(balance) - 1.39
-            if(balance >0):
-                print("Vending Soda, you have", str(balance), "dollars left")
-            else:
-                print("you don't have enough money to buy Soda <", str(rdollar), "<", str(1.39), ">")
+            print("Vending tissues, have a nice day")
+            return vend_complete()
+        elif choice == "2":
+            balance = float(balance) - 1
+            print("Vending Juice")
+            return vend_complete()
+        elif choice == "3":
+            balance = float(balance) - 1
+            print("Vending Soda")
+            return vend_complete()
         elif choice == "x":
             return main_menu()
         else:
@@ -87,12 +97,12 @@ def snacks_menu():
 
 while True:
 
-    main_menu()
+    idle_screen()
     choice = input()
     choice = int(choice)
     if choice == 1:
             balance = 1
-            drinks_menu()
+            runny_nose()
     elif choice == 2:
             balance = 2
             snacks_menu()
