@@ -1,5 +1,11 @@
 import time
+from os import system, name
+
+def clear(): 
+        system('clear') 
+
 def main_menu():
+    clear()
     print("-----------------------------------\n"
           "Main menu:\n"
           "-----------------------------------\n"
@@ -9,6 +15,7 @@ def main_menu():
           "Select option 3 to exit>: ")
 
 def idle_screen():
+    clear()
     print("Welcome to the Baymax Vending Machine!\n"
           "Press any button to begin!")
     choice = input("")
@@ -23,10 +30,10 @@ def vend_complete():
     time.sleep(5)
     return idle_screen()
 
-
 def runny_nose():
 
     while True:
+        clear()
         print("-----------------------------------\n"
           "Runny Nose menu:\n"
           "-----------------------------------\n"
@@ -59,6 +66,7 @@ def runny_nose():
 def snacks_menu():
 
     while True:
+        clear()
         print("-----------------------------------\n"
           "snacks menu:\n"
           "-----------------------------------\n"
@@ -96,7 +104,6 @@ def snacks_menu():
             print("invalid option!")
 
 while True:
-
     idle_screen()
     choice = input()
     choice = int(choice)
