@@ -16,12 +16,28 @@ def main_menu():
           "Select option 4 for other symptoms ")
 
 def idle_screen():
+  
+         clear()
+         print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
+          "Press any button to begin!")
+         choice = input()
+         choice = str(choice)
+         if choice == 1:
+             return main_menu()
+         else:
+             return main_menu()
+         try:
+         except:
+              print("Please choose one of the options listed")
+              sleep(5)
+     return idle_screen()
+
     clear()
     print("Hello I am Baymax, your personal healthcare companion. \nI offer personalized solutions for your medical needs so you can become healthy!\n"
           "Press any button to begin!")
-    choice = input("")
+    choice = input()
     choice = str(choice)
-    if choice == "e":
+    if choice == 1:
         return main_menu()
     else:
         return main_menu()
@@ -138,6 +154,8 @@ while True:
             print("-------------------------------\n"
                   "Inserted amount: ", str(rdollar),",", "total purchase: ", rdollar-balance, ",", "change: ", balance)
             exit()
+    elif choice == string:
+            main_menu()
     else:
             print("invalid option!")
 
