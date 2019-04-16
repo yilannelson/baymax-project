@@ -2,7 +2,7 @@ import time
 from os import system, name
 
 def clear(): 
-        system('cls') 
+        system('clear') 
 
 def main_menu():
     clear()
@@ -60,11 +60,10 @@ def runny_nose():
             return main_menu()
         else:
             print("invalid option!")
+def dehydration
 
-def dehydration():
-
-    while True:
-        system('cls')
+	while True:
+        clear()
         print("-----------------------------------\n"
           "Dehydration menu:\n"
           "-----------------------------------\n"
@@ -76,7 +75,7 @@ def dehydration():
             global balance
             balance = float(balance) - 1
             global total_purchase
-            print("Vending Herbal Tea, have a nice day")
+            print("Vending tissues, have a nice day")
             return vend_complete()
         elif choice == "2":
             balance = float(balance) - 1
@@ -106,7 +105,7 @@ def SoreThroat_menu():
         print("-----------------------------------\n"
           "Sore Throat menu:\n"
           "-----------------------------------\n"
-          "[1] Cough Drops\n")
+          "Cough Drops\n")
         choice = input("Sore Throat option: ")
         choice = str(choice)
         if choice == "Cough Drops":
@@ -114,7 +113,7 @@ def SoreThroat_menu():
             balance = float(balance) - 0.99
             global total_purchase
             if(balance >0):
-                print("Vending cough drops, you have", str(balance), "dollars left")
+                print("Vending water, you have", str(balance), "dollars left")
             else:
                 print("you don't have enough money to buy Chips <", str(rdollar), "<", str(0.99), ">")
 
@@ -130,14 +129,12 @@ while True:
             SoreThroat_menu()
     elif choice == 3:
             balance = 3
-            dehydration()
-	#elif choice == 5:
-     #       balance = 5
-      #      other()
+            other()
     elif choice == 4:
             print("-------------------------------\n"
                   "Inserted amount: ", str(rdollar),",", "total purchase: ", rdollar-balance, ",", "change: ", balance)
             exit()
     else:
             print("invalid option!")
+@app.route('/hello/')
 
