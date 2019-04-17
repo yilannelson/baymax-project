@@ -16,31 +16,26 @@ def main_menu():
           "Select option 4 for other symptoms ")
 
 def idle_screen():
-  
-         clear()
-         print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
-          "Press any button to begin!")
-         choice = input()
-         choice = str(choice)
-         if choice == 1:
-             return main_menu()
-         else:
-             return main_menu()
-         try:
-         except:
-              print("Please choose one of the options listed")
-              sleep(5)
-     return idle_screen()
+        clear()
+        print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
+        "Press any button to begin!")
+        choice = input()
+        choice = str(choice)
+        if choice == 1:
+            return main_menu()
+        else:
+            return main_menu()
+        return idle_screen()
 
-    clear()
-    print("Hello I am Baymax, your personal healthcare companion. \nI offer personalized solutions for your medical needs so you can become healthy!\n"
+        clear()
+        print("Hello I am Baymax, your personal healthcare companion. \nI offer personalized solutions for your medical needs so you can become healthy!\n"
           "Press any button to begin!")
-    choice = input()
-    choice = str(choice)
-    if choice == 1:
-        return main_menu()
-    else:
-        return main_menu()
+        choice = input()
+        choice = str(choice)
+        if choice == 1:
+            return main_menu()
+        else:
+            return main_menu()
 
 def vend_complete():
     print("Have a nice Day")
@@ -151,8 +146,7 @@ while True:
      #       balance = 5
       #      other()
     elif choice == 4:
-            print("-------------------------------\n"
-                  "Inserted amount: ", str(rdollar),",", "total purchase: ", rdollar-balance, ",", "change: ", balance)
+            print("Work in Progress.\n")
             exit()
     elif choice == string:
             main_menu()
