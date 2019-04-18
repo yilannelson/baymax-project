@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
+from __init__ import *
 
-app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "Hey there!"
+def hello():
+    return render_template('index.html')
 	
 if __name__ == '__main__':
     app.run(debug=True)
@@ -162,5 +162,3 @@ while True:
             main_menu()
     else:
             print("invalid option!")
-
-return render_template("index.html", data=data)
