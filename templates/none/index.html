@@ -7,7 +7,6 @@
 <head>
 
 <style>
-
 .button {
   position: relative;
   background-color: #4CAF50;
@@ -22,6 +21,7 @@
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  align: center;
 }
 
 .button:after {
@@ -52,7 +52,7 @@
   <title>ShowPage - An Easy to Use Free Responsive Landing Page</title>
   <meta name="description" content="This template is an easy to use app landing page, responsive and pretty easy to customize including some great easing effects, modal window, a sticky header with share buttons & others stuff !" />
   <meta name="keywords" content="Free, template, easy to use, customise, one page, template, simple, minimal, landing page, app page, supview" />
-  <meta name="author" content="Supview - François Martin">
+  <meta name="author" content="Supview - FranĂ§ois Martin">
 
   <!-- Favicon /-->
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> <!-- Favicon /-->
@@ -69,24 +69,27 @@
   
 </head>
 
-<div id="wrapper">
-<body align="center">
+
+<body>
 
 <!-- Preload the Whole Page -->
 
+<div id="preloader">   		
+<div id="loading-animation">&nbsp;</div>
+</div>
+
+
 <!-- NAVIGATION ############################################### -->
 
-<a href='none'> <button class="button"> None </button> </a>
-<a href='sore_throat'> <button class="button"> Sore Throat </button> </a>
-<a href='dehydration'> <button class="button"> Dehydration </button> </a>
-<a href='other'> <button class="button"> Other </button> </a>
+
+<input class="button" type="button" name="submit_button" value="Dispense Wet Wipes">
 <!-- END FOOTER SECTION ############################################### -->
-</div> 
 
 
 
 
-<!-- end of container -->
+
+</div> <!-- end of container -->
 
 
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
@@ -112,3 +115,11 @@
   </body>
   
 </html>
+
+
+
+
+
+
+
+

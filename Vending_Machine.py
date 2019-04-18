@@ -2,12 +2,12 @@ from flask import Flask, render_template
 from __init__ import *
 def buttons():
     if request.method == 'POST':
-        if request.form['submit_button'] == 'Dispense Tissues':
-			print("Tissue")
+        if request.form['submit_button'] == 'Dispense Wet Wipes':
+            print("Wet Wipes")
         elif request.form['submit_button'] == 'Dispense Cough Drop':
-			print("Cough Drop")
+            print("Cough Drop")
         elif request.form['submit_button'] == 'Dispense Herbal Tea': 
-			print("Tea")
+            print("Tea")
         elif request.form['submit_button'] == 'Dehydration':
             return dehydrationhtml()
         else:
@@ -15,6 +15,15 @@ def buttons():
 @app.route("/dehydration")
 def dehydrationhtml():
     return render_template("/dehydration/index.html")
+@app.route("/sore_throat")
+def sthroathtml():
+    return render_template("/sore_throat/index.html")
+@app.route("/none")
+def nonehtml():
+    return render_template("/none/index.html")
+@app.route("/other")
+def otherhtml():
+    return render_template("/other/index.html")
 
 @app.route('/')
 def hello():
@@ -33,7 +42,7 @@ def main_menu():
     print("-----------------------------------\n"
           "What sypmtoms are you displaying?\n"
           "-----------------------------------\n"
-          "[1] Runny Nose\n"
+          "[1] None\n"
           "[2] Sore Throat\n"
 		  "[3] Dehydration\n"
           "[4] Other\n"
@@ -66,22 +75,22 @@ def vend_complete():
     time.sleep(5)
     return idle_screen()
 
-def runny_nose():
+def none():
 
     while True:
         clear()
         print("-----------------------------------\n"
-          "Runny Nose menu:\n"
+          "none menu:\n"
           "-----------------------------------\n"
-          "[1] Tissue    \n"
+          "[1] Wet Wipes    \n"
                                                  )
-        choice = input("Runny Nose option: ")
+        choice = input("none option: ")
         choice = str(choice)
         if choice == "1":
             global balance
             balance = float(balance) - 1
             global total_purchase
-            print("Vending tissues, have a nice day")
+            print("Vending Wet Wipes, have a nice day")
             return vend_complete()
         elif choice == "2":
             balance = float(balance) - 1
@@ -159,7 +168,7 @@ while True:
     choice = int(choice)
     if choice == 1:
             balance = 1
-            runny_nose()
+            none()
     elif choice == 2:
             balance = 2
             SoreThroat_menu()
