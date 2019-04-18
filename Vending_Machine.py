@@ -1,6 +1,17 @@
 from flask import Flask, render_template
 from __init__ import *
-
+def contact():
+    if request.method == 'POST':
+        if request.form['Tissue_Button'] == 'Dispense Tissues':
+            pass 
+        elif request.form['Cough Drop_Button'] == 'Dispense Cough Drop':
+            pass  
+		elif request.form['Herbal Tea_Button'] == 'Dispense Herbal Tea':
+            pass  
+        else:
+            pass 
+    elif request.method == 'GET':
+        return render_template('contact.html', form=form)
 
 @app.route('/')
 def hello():
