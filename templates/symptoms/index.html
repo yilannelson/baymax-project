@@ -6,15 +6,17 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
 
-
 <style>
+
 .button {
   position: relative;
-  background-color: #4CAF50;
+  background-color: #FF4500;
+
   border: none;
-  font-size: 28px;
+  font-size: 35px;
   color: #FFFFFF;
   padding: 20px;
+  height: 160px;
   width: 100%;
   text-align: center;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -22,8 +24,8 @@
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  align: center;
 }
+
 
 .button:after {
   content: "";
@@ -53,7 +55,7 @@
   <title>ShowPage - An Easy to Use Free Responsive Landing Page</title>
   <meta name="description" content="This template is an easy to use app landing page, responsive and pretty easy to customize including some great easing effects, modal window, a sticky header with share buttons & others stuff !" />
   <meta name="keywords" content="Free, template, easy to use, customise, one page, template, simple, minimal, landing page, app page, supview" />
-  <meta name="author" content="Supview - FranĂ§ois Martin">
+  <meta name="author" content="Supview - François Martin">
 
   <!-- Favicon /-->
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> <!-- Favicon /-->
@@ -70,27 +72,24 @@
   
 </head>
 
-
-<body>
+<div id="wrapper">
+<body align="center">
 
 <!-- Preload the Whole Page -->
 
-<div id="preloader">   		
-<div id="loading-animation">&nbsp;</div>
-</div>
-
-
 <!-- NAVIGATION ############################################### -->
-
-
-<input type="button" class="button" name="submit_button" value="We are unable to assist you with your symptoms, we advise going to see the school nurse for aditional assitance">
+<button class="button"> What symptoms are you displaying?  </button> </a>
+<a href='dehydration/index.html'> <button class="button"> Dehydration </button> </a>
+<a href='sore_throat/index.html'> <button class="button"> Sore Throat </button> </a>
+<a href='none/index.html'> <button class="button"> None </button> </a>
+<a href='other/index.html'> <button class="button"> Other </button> </a>
 <!-- END FOOTER SECTION ############################################### -->
+</div> 
 
 
 
 
-
-</div> <!-- end of container -->
+<!-- end of container -->
 
 
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
@@ -116,11 +115,3 @@
   </body>
   
 </html>
-
-
-
-
-
-
-
-

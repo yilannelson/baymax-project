@@ -50,17 +50,6 @@ def main_menu():
 
 def idle_screen():
         clear()
-        print("Welcome to Baymax, your helpful friend who can assist you with your medical needs! \nBaymax offers personalized solutions \nmeant to aid you in combating your illness so you can become strong and healthy!\n"
-        "Press any button to begin!")
-        choice = input()
-        choice = str(choice)
-        if choice == 1:
-            return main_menu()
-        else:
-            return main_menu()
-        return idle_screen()
-
-        clear()
         print("Hello I am Baymax, your personal healthcare companion. \nI offer personalized solutions for your medical needs so you can become healthy!\n"
           "Press any button to begin!")
         choice = input()
@@ -69,7 +58,7 @@ def idle_screen():
             return main_menu()
         else:
             return main_menu()
-
+        return idle_screen()
 def vend_complete():
     print("Have a nice Day")
     time.sleep(5)
